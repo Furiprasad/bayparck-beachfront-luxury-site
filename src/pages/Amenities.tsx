@@ -1,8 +1,7 @@
-
 import Hero from "../components/Hero";
 import SectionTitle from "../components/SectionTitle";
 import FeatureItem from "../components/FeatureItem";
-import { Swimming, Dumbbell, Users, Tent, Bike, Landmark, Home, Shirt } from "lucide-react";
+import { Waves, Dumbbell, Users, Tent, Bike, Landmark, Home, Shirt } from "lucide-react";
 
 const Amenities = () => {
   return (
@@ -24,7 +23,7 @@ const Amenities = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <FeatureItem 
-              icon={<Swimming className="h-8 w-8" />}
+              icon={<Waves className="h-8 w-8" />}
               title="Swimming Pool"
               description="Luxurious infinity pool with ocean views, perfect for relaxation and exercise."
             />

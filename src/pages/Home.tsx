@@ -1,9 +1,8 @@
-
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import SectionTitle from "../components/SectionTitle";
 import FeatureItem from "../components/FeatureItem";
-import { Swimming, Dumbbell, Users, Landmark, MapPin, PiggyBank, Calendar, CreditCard } from "lucide-react";
+import { Waves, Dumbbell, Users, Landmark, MapPin, PiggyBank, Calendar, CreditCard } from "lucide-react";
 
 const Home = () => {
   return (
@@ -155,7 +154,7 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             <div className="text-center bg-white/10 p-6 rounded-lg hover-scale">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Swimming className="text-white h-8 w-8" />
+                <Waves className="text-white h-8 w-8" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Swimming Pool</h3>
             </div>
