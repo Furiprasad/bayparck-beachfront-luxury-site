@@ -24,8 +24,8 @@ const PlotsVillas = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="/lovable-uploads/1aed6b55-0252-41ab-b7c5-22bc8c442514.png" 
-                alt="Beachfront Plots" 
+                src="/lovable-uploads/02413078-948a-48e5-8952-385d0ccc1617.png" 
+                alt="Premium Cottage" 
                 className="rounded-lg shadow-xl" 
               />
             </div>
@@ -172,8 +172,8 @@ const PlotsVillas = () => {
             
             <div className="order-1 lg:order-2">
               <img 
-                src="/lovable-uploads/f28e4b0b-d6aa-426f-beda-8859140dc824.png" 
-                alt="Luxury Villas" 
+                src="/lovable-uploads/9a91ead9-a154-4502-870d-c1471cf58bde.png" 
+                alt="Luxury Cottage" 
                 className="rounded-lg shadow-xl" 
               />
             </div>
