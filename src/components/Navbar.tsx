@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/242512e9-5634-4647-bd4d-d1e753ca3983.png" 
+            src="/lovable-uploads/dfdbe9ec-0973-490b-8055-bcd497d6fa37.png" 
             alt="SVN Bay Parck Logo" 
             className="h-12 md:h-16"
           />

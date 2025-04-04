@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="space-y-4">
             <img 
-              src="/lovable-uploads/242512e9-5634-4647-bd4d-d1e753ca3983.png" 
+              src="/lovable-uploads/dfdbe9ec-0973-490b-8055-bcd497d6fa37.png" 
               alt="SVN Bay Parck Logo" 
               className="h-16 bg-white p-2 rounded"
             />
@@ -66,27 +66,17 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Form */}
+          {/* Directions */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold mb-4 border-b border-white/20 pb-2">Get in Touch</h3>
-            <form className="space-y-3">
-              <input 
-                type="text" 
-                placeholder="Name" 
-                className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded focus:outline-none focus:border-secondary" 
-              />
-              <input 
-                type="email" 
-                placeholder="Email" 
-                className="w-full px-3 py-2 text-sm bg-white/10 border border-white/20 rounded focus:outline-none focus:border-secondary" 
-              />
-              <button 
-                type="submit" 
-                className="w-full bg-secondary hover:bg-opacity-90 text-white py-2 rounded transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
+            <h3 className="text-lg font-semibold mb-4 border-b border-white/20 pb-2">Directions</h3>
+            <p className="text-sm">
+              From Visakhapatnam: Take NH16 towards Vizianagaram, turn at Bhogapuram and follow signs to SVN Bay Parck 
+              (approximately 45 minutes drive).
+            </p>
+            <p className="text-sm mt-2">
+              From Vizianagaram: Travel south towards Bhogapuram and follow the coastal road signs to SVN Bay Parck 
+              (approximately 25 minutes drive).
+            </p>
           </div>
         </div>
 

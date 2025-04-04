@@ -1,35 +1,9 @@
 
-import { useState } from "react";
-import { toast } from "sonner";
 import Hero from "../components/Hero";
 import SectionTitle from "../components/SectionTitle";
-import { Phone, Mail, MapPin, Send } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    toast.success("Thank you for your message! We'll get back to you soon.");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: ""
-    });
-  };
-
   return (
     <main>
       {/* Hero Section */}
@@ -87,71 +61,20 @@ const Contact = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Google Form */}
             <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-primary mb-6">Send Us a Message</h3>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-gray-700 mb-2">Name</label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50" 
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-gray-700 mb-2">Email</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50" 
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="phone" className="block text-gray-700 mb-2">Phone Number</label>
-                  <input 
-                    type="tel" 
-                    id="phone" 
-                    name="phone" 
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50" 
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-gray-700 mb-2">Message</label>
-                  <textarea 
-                    id="message" 
-                    name="message" 
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50" 
-                    required
-                  ></textarea>
-                </div>
-                
-                <button 
-                  type="submit" 
-                  className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md font-medium flex items-center justify-center transition-colors"
+              <h3 className="text-2xl font-semibold text-primary mb-6">Inquiry Form</h3>
+              <div className="overflow-hidden h-[800px] w-full">
+                <iframe 
+                  src="https://docs.google.com/forms/d/e/1FAIpQLScX0NxUHedHmKsntor1bqFGWL_AKRCuiPr4o7Ozijm67aKrkg/viewform?embedded=true" 
+                  width="100%" 
+                  height="1565" 
+                  style={{ border: 0 }}
+                  title="Contact Form"
                 >
-                  <Send className="h-5 w-5 mr-2" />
-                  Send Message
-                </button>
-              </form>
+                  Loading…
+                </iframe>
+              </div>
             </div>
             
             {/* Map */}
@@ -166,6 +89,7 @@ const Contact = () => {
                   allowFullScreen 
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
+                  title="Location Map"
                 ></iframe>
               </div>
             </div>
