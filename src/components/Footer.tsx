@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="space-y-4">
             <img 
-              src="/lovable-uploads/a86b33c4-3732-459f-bbcb-5628fb50df1f.png" 
+              src="/lovable-uploads/242512e9-5634-4647-bd4d-d1e753ca3983.png" 
               alt="SVN Bay Parck Logo" 
               className="h-16 bg-white p-2 rounded"
             />
