@@ -61,26 +61,35 @@ const Contact = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Google Form */}
+            {/* Google Form - Styled to match website */}
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold text-primary mb-6">Inquiry Form</h3>
-              <div className="overflow-hidden h-[800px] w-full">
-                <iframe 
-                  src="https://docs.google.com/forms/d/e/1FAIpQLScX0NxUHedHmKsntor1bqFGWL_AKRCuiPr4o7Ozijm67aKrkg/viewform?embedded=true" 
-                  width="100%" 
-                  height="1565" 
-                  style={{ border: 0 }}
-                  title="Contact Form"
-                >
-                  Loading…
-                </iframe>
+              <div className="relative overflow-hidden w-full rounded-lg border border-gray-200">
+                <div className="aspect-ratio-container" style={{ position: 'relative', paddingTop: '110%' }}>
+                  <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLScX0NxUHedHmKsntor1bqFGWL_AKRCuiPr4o7Ozijm67aKrkg/viewform?embedded=true" 
+                    className="absolute top-0 left-0 w-full h-full bg-white"
+                    style={{ 
+                      border: 0,
+                      transform: 'scale(0.95)',
+                      transformOrigin: '0 0',
+                      height: '105%',
+                      width: '105%'
+                    }}
+                    title="Contact Form"
+                    aria-label="SVN Bay Parck Inquiry Form"
+                    loading="lazy"
+                  >
+                    Loading…
+                  </iframe>
+                </div>
               </div>
             </div>
             
             {/* Map */}
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold text-primary mb-6">Our Location</h3>
-              <div className="rounded-lg overflow-hidden h-[400px]">
+              <div className="rounded-lg overflow-hidden h-[500px]">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.5078040655417!2d83.7581077!3d18.140506799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c0f0027cff3bb%3A0xeabdd61628bb3c6!2sSVN%20Bay%20Parck!5e0!3m2!1sen!2sin!4v1743673709774!5m2!1sen!2sin" 
                   width="100%" 
@@ -90,6 +99,7 @@ const Contact = () => {
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Location Map"
+                  className="rounded-lg shadow-sm"
                 ></iframe>
               </div>
             </div>
