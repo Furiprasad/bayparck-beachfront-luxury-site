@@ -52,25 +52,36 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center space-x-1">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
-              className={`text-sm font-medium hover:text-secondary transition-colors ${
+              className={`relative px-4 py-2 text-sm font-medium transition-all duration-200 rounded-md ${
                 location.pathname === link.path
-                  ? "text-secondary border-b-2 border-secondary"
-                  : isScrolled ? "text-primary" : "text-white"
+                  ? "text-white bg-secondary" 
+                  : isScrolled 
+                    ? "text-primary hover:bg-gray-100" 
+                    : "text-white hover:bg-white/20"
               }`}
             >
               {link.name}
+              {location.pathname === link.path && (
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-secondary" />
+              )}
             </Link>
           ))}
         </nav>
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-primary focus:outline-none"
+          className={`lg:hidden p-2 rounded-full transition-colors ${
+            isOpen 
+              ? "bg-gray-100" 
+              : isScrolled 
+                ? "text-primary hover:bg-gray-100" 
+                : "text-white hover:bg-white/20"
+          }`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -80,24 +91,34 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <nav className="lg:hidden bg-white p-4 animate-fade-in">
-          <div className="flex flex-col space-y-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={`text-primary text-sm font-medium p-2 hover:bg-gray-100 rounded ${
-                  location.pathname === link.path
-                    ? "text-secondary border-l-4 border-secondary pl-4"
-                    : ""
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-        </nav>
+        <div className="lg:hidden bg-white shadow-lg animate-slide-in-right absolute top-full right-0 w-[250px] h-screen">
+          <nav className="p-4">
+            <div className="flex flex-col space-y-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className={`px-4 py-3 text-sm font-medium rounded-md transition-all duration-200 ${
+                    location.pathname === link.path
+                      ? "text-white bg-secondary" 
+                      : "text-primary hover:bg-gray-100"
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </nav>
+        </div>
+      )}
+      
+      {/* Overlay for mobile menu */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black/20 backdrop-blur-sm lg:hidden z-[-1]"
+          onClick={() => setIsOpen(false)}
+        />
       )}
     </header>
   );
